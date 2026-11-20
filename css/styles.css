@@ -1,0 +1,224 @@
+.body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.header{
+    position: flex;
+    border-radius: 10px;
+    background-color: #334155;
+    width: auto;
+    height: 60px;
+}
+.logo{
+    position: absolute;
+    font-size: xx-large;
+    left: 10%;
+    top: 5px;
+    font-weight: bold;
+    color: white;
+}
+.nav{
+    font-size: medium;
+    position: absolute;
+    left: 50%;
+    top: 15px;
+    color: white;
+}
+.menu{
+    font-size: small;
+    position: absolute;
+    left: 75%;
+    top: 15px;
+    color: white;
+}
+
+.hero{
+    display: flex;
+    margin-top: 10px;
+    border-radius: 10px;
+    background-color: rgb(185, 223, 238);
+    width: auto;
+    height: 160px;
+}
+.hero h1{
+    position: absolute;
+    top: 65px;
+    left: 41%;
+    color: rgb(31, 77, 228);
+    text-align: center;
+}
+.hero h2{
+    position: absolute;
+    top: 120px;
+    left: 44%;
+    color: rgb(6, 59, 231);
+    text-align: center;
+}
+.hero button{
+    border: 1px;
+    padding: 5px;
+    border-radius: 5px;
+    flex: 1;
+    position: absolute;
+    top: 190px;
+    left: 46%;
+    background-color: rgb(57, 185, 224);
+}
+
+.cards{
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+    background-color: white;
+    width: auto;
+    height: 80px;
+}
+.tarjeta{
+    color: rgb(15, 85, 15);
+    flex: 1;
+    padding: 25px;
+    margin: 5px;
+    background-color: lightgreen;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.tarjeta-tablet {
+    display: none;
+}
+
+.about{
+    background-color: rgb(238, 202, 247);
+    margin-top: 5px;
+    width: auto;
+    text-align: center;
+    padding: 30px;
+    color: rgb(160, 64, 184);
+}
+
+.call{
+    background-color: rgb(240, 240, 144);
+    margin-top: 10px;
+    width: auto;
+    text-align: center;
+    padding: 30px;
+    color: rgb(134, 75, 2);
+}
+
+.footer{
+    background-color: rgb(33, 41, 55);
+    margin-top: 10px;
+    width: auto;
+    text-align: center;
+    padding: 30px;
+    color: rgba(255, 255, 255, 0.932);
+}
+@media (max-width: 900px) {
+    .header {
+        position: relative;
+    }
+    .logo {
+        top: 20px;
+        left: 10px;
+        font-size: 16px;
+    }
+    .nav {
+        display: none;
+    }
+    .menu {
+        top: 20px;
+        right: 10px;
+        left: auto;
+        font-size: 16px;
+    }
+    .hero {
+        position: relative;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .hero h1,
+    .hero h2,
+    .hero button {
+        position: static;
+        flex: none;
+        margin: 5px 0;
+    }
+    .cards {
+        display: grid;
+        height: auto;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .tarjeta {
+        margin: 2px;
+        padding: 12px;
+    }
+    .about,
+    .call,
+    .footer {
+        padding: 18px 12px;
+    }
+}
+@media (min-width: 481px) and (max-width: 900px) {
+    .tarjeta-tablet {
+        display: block;
+    }
+}
+@media (max-width: 480px) {
+    body {
+        padding: 4px;
+        background-color: #0c0c0c;
+    }
+
+    .heder {
+        height: 36px;
+        border-radius: 4px;
+    }
+    .logo,
+    .menu {
+        top: 10px;
+        font-size: 10px;
+    }
+    .hero {
+        height: 84px;
+        margin-top: 5px;
+        border-radius: 4px;
+    }
+    .hero h1 {
+        font-size: 12px;
+    }
+    .hero h2 {
+        font-size: 8px;
+    }
+    .hero button {
+        width: calc(100% - 24px);
+        padding: 5px;
+        font-size: 8px;
+    }
+    .cards {
+        grid-template-columns: 1fr;
+        gap: 4px;
+        margin-top: 4px;
+    }
+    .tarjeta {
+        min-height: 44px;
+        margin: 0;
+        padding: 8px;
+        border-radius: 4px;
+        font-size: 10px;
+    }
+    .tarjeta-tablet {
+        display: none;
+    }
+    .about,
+    .call,
+    .footer {
+        margin-top: 5px;
+        padding: 12px 8px;
+        border-radius: 4px;
+        font-size: 10px;
+    }
+}
